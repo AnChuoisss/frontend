@@ -1,0 +1,141 @@
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff; /* Đảm bảo nền xanh dương */
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    margin: -10px -10px 10px -10px; /* Điều chỉnh lại margin để không bị thừa phần trắng bên ngoài */
+    width: calc(100% + 20px); /* Đảm bảo phần header rộng hơn và không bị cắt mất */
+  }
+  
+  .chat-header h4 {
+    margin: 0;
+    white-space: nowrap; /* Ngăn việc xuống dòng */
+  }
+  
+  .close-button {
+    background: none;
+    margin-left: 150px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    margin-left: auto; /* Đẩy nút đóng về mép phải */
+    width: 150px;
+  }
+  
+  .chat-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .chat-options button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+  }
+  
+  .chat-options button:hover {
+    background-color: #0056b3;
+  }
+  
+  .chat-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: 10px 0;
+    max-width: 100%; /* Hoặc giá trị cụ thể như 300px, 500px */
+    overflow: hidden; /* Ẩn phần tràn ra ngoài */
+    text-overflow: ellipsis; /* Thêm dấu "..." nếu cần (dành cho 1 dòng) */
+    white-space: normal; /* Đa dòng xuống dòng */
+    word-wrap: break-word;
+  }
+  
+  .chat-message {
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+  
+  .chat-message.user-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+  }
+  
+  .chat-message.chatbot-message {
+    background-color: #e74c3c; /* Hộp màu đỏ cho chatbot */
+    color: white;
+    align-self: flex-start;
+  }
+  
+
+  
+  .chat-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .chat-input {
+    display: flex;
+    align-items: center;
+    background-color: #007bff; /* Màu nền xanh dương cho phần cuối */
+    padding: 10px;
+    border-radius: 0 0 8px 8px; /* Bo góc dưới */
+    width: 100%; /* Đảm bảo chiều rộng chiếm hết phần còn lại */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+    margin: 0; /* Đảm bảo không có khoảng cách ngoài */
+    border: none; /* Loại bỏ viền ngoài */
+  }
+  
+  .chat-input input {
+    flex-grow: 3; /* 3/4 dòng */
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+    background-color: #f1f1f1; /* Nền sáng cho input */
+    color: #333; /* Màu chữ input */
+    width: 100%; /* Đảm bảo input chiếm đủ không gian */
+    box-sizing: border-box; /* Đảm bảo không gian input không bị thay đổi */
+    margin-top: 10px;
+  }
+  
+  .chat-input button {
+    flex-grow: 1; /* 1/4 dòng */
+    background-color: #0056b3; /* Màu nền cho nút gửi */
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 50px; /* Đảm bảo chiều rộng cố định cho nút gửi */
+  }
+  
+  .chat-input button:hover {
+    background-color: #003c8f; /* Màu khi hover */
+  }
